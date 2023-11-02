@@ -1,10 +1,12 @@
 package io.zipcoder;
 
 
+import java.lang.reflect.Array;
+
 /**
  * @author tariq
  */
-public class StringsAndThings {
+public class  StringsAndThings {
 
     /**
      * Given a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavy" and the 'z' in "fez" count,
@@ -15,8 +17,17 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+    String[] str = input.split("\\s");
+    int countM = 0;
+    for(int i =0 ; i < str.length-1; i++){
+        if( str[i] .charAt(str[i].length()-1) == 'y' ||  str[i] .charAt(str[i].length()-1) == 'z')){
+    countM = countM+1;
+
+        }
     }
+        return countM;
+    }
+
 
     /**
      * Given two strings, base and remove, return a version of the base string where all instances of the remove string have
@@ -24,11 +35,12 @@ public class StringsAndThings {
      * Remove only non-overlapping instances, so with "xxx" removing "xx" leaves "x".
      *
      * example : removeString("Hello there", "llo") // Should return "He there"
-     *           removeString("Hello there", "e") //  Should return "Hllo thr"
+     *           removeString("Hello there", "e") //  Should return "Hello thr"
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
-        return null;
+
+        return base.replace(remove, "");
     }
 
     /**
@@ -36,11 +48,14 @@ public class StringsAndThings {
      * to the number of appearances of "not" anywhere in the string (case sensitive)
      *
      * example : containsEqualNumberOfIsAndNot("This is not")  // Should return false
-     *           containsEqualNumberOfIsAndNot("This is notnot") // Should return true
+     *           containsEqualNumberOfIsAndNot("This is not") // Should return true
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
+        int isCount = (input.length() - input.replace("is", "").length()) / 2;
+        int notCount = (input.length() - input.replace("not", "").length()) / 3;
+        return (isCount == notCount);
+
     }
 
     /**
@@ -65,4 +80,9 @@ public class StringsAndThings {
     public Integer countTriple(String input){
         return null;
     }
+
+
+
+
 }
+
