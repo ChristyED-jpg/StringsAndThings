@@ -20,7 +20,7 @@ public class  StringsAndThings {
     String[] str = input.split("\\s");
     int countM = 0;
     for(int i =0 ; i < str.length-1; i++){
-        if( str[i] .charAt(str[i].length()-1) == 'y' ||  str[i] .charAt(str[i].length()-1) == 'z')){
+        if( str[i] .charAt(str[i].length()-1) == 'y' ||  str[i] .charAt(str[i].length()-1) == 'z'){
     countM = countM+1;
 
         }
@@ -52,7 +52,13 @@ public class  StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        int isCount = 0;
+
+
+
+
+
+
+        /*int isCount = 0;
         int notCount = 0;
 
         for( int i =0; i< input.length(); i++){
@@ -61,8 +67,9 @@ public class  StringsAndThings {
 
             if(is1.equalsIgnoreCase("is")) {
                 isCount += 1;
+*//*
             }
-        }
+        }*/
 
 
 
@@ -74,7 +81,7 @@ public class  StringsAndThings {
 //        int notCount = (input.length() - input.replace("not", "").length()) / 3;
 //        return (isCount == notCount);
 
-    }
+  //  }
 
     /**
      * We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right.
@@ -84,9 +91,6 @@ public class  StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        if{
-
-        }
         return null;
     }
 
@@ -99,6 +103,8 @@ public class  StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
+
+
         return null;
     }
 
