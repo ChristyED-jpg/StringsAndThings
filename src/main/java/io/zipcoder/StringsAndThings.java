@@ -91,9 +91,15 @@ public class  StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
+        Integer count = 0;
+        for ( int i =0; i< input.length()-2 ; i++){
+            if(input.charAt(i) == input.charAt(i+1) && input.charAt(i+1) == input.charAt(i+2)){
+                count++;
+            }
+        }
 
 
-        return null;
+        return count;
     }
 
 
