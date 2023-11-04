@@ -67,7 +67,19 @@ public class  StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
+        char[] chars = input.toCharArray();
+
+        Boolean happy = false;
+
+        for (int i = 0; i < chars.length-1; i++){
+            if(chars[i] == 'g' && chars[i + 1] =='g'){
+            happy = true;
+            i++;
+        }else if (chars[i] =='g' && chars[i + 1] != 'g'){
+                happy = false;
+            }
+        }
+        return happy;
     }
 
 
