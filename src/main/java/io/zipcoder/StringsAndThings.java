@@ -53,35 +53,11 @@ public class  StringsAndThings {
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
 
+        int isCount = (input.length() - input.replace("is", "").length()) / 2;
+       int notCount = (input.length() - input.replace("not", "").length()) / 3;
+      return (isCount == notCount);
 
-
-
-
-
-        /*int isCount = 0;
-        int notCount = 0;
-
-        for( int i =0; i< input.length(); i++){
-            String is1 = input.substring(i, i+1);
-            String is2 = "is";
-
-            if(is1.equalsIgnoreCase("is")) {
-                isCount += 1;
-*//*
-            }
-        }*/
-
-
-
-
-
-
-
-//        int isCount = (input.length() - input.replace("is", "").length()) / 2;
-//        int notCount = (input.length() - input.replace("not", "").length()) / 3;
-//        return (isCount == notCount);
-
-  //  }
+    }
 
     /**
      * We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right.
