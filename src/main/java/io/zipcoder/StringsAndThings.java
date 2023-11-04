@@ -75,8 +75,10 @@ public class  StringsAndThings {
             if(chars[i] == 'g' && chars[i + 1] =='g'){
             happy = true;
             i++;
+            break;
         }else if (chars[i] =='g' && chars[i + 1] != 'g'){
                 happy = false;
+
             }
         }
         return happy;
